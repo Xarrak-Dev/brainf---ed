@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://vc6fqkgcfr26"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_8ac0g"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_8ac0g")
+
+[node name="Editor" type="TextEdit" parent="."]
+offset_left = 336.0
+offset_top = 55.0
+offset_right = 789.0
+offset_bottom = 429.0
+
+[node name="ProcessButton" type="Button" parent="."]
+offset_left = 870.0
+offset_top = 211.0
+offset_right = 972.0
+offset_bottom = 255.0
+text = "Process"
+
+[connection signal="pressed" from="ProcessButton" to="." method="_on_process_button_pressed"]
