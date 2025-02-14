@@ -18,4 +18,12 @@ offset_right = 972.0
 offset_bottom = 255.0
 text = "Process"
 
+[node name="ExitButton" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Exit"
+
+[node name="Cells" type="Node" parent="."]
+
 [connection signal="pressed" from="ProcessButton" to="." method="_on_process_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
