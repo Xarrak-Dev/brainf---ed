@@ -1,0 +1,20 @@
+{
+	"0": {
+		"type":"cellValue",
+		"defaultCellSetup":null,
+		"allowedFunctions":
+			{
+				"input": false,
+				"speed": false
+			},
+		"cellNumber":4,
+		"cellSize":4,
+		"solutionType":"cell",
+		"solution":1,
+		"description":
+			{
+				"page0":"[center]Welcome to Brainf***ed!\n\nThere will be a real tutorial showing all of the elements eventually, but I don't want to do that currently.\n\nBrainf**k is an esoteric programming language, a language made to test the limits of computer language design. It is a very simple programming language, with only 8 commands; [color=red]+-<>,[].[/color] \n\nThe first five commands ([color=red]+-<>,[/color]) are used for manipulation of cells, which is what Brainf**k interacts with in order to produce output and read input. The next two commands ([color=red][][/color]) are used for looping over sections of code, repeating it to make the code shorter and more readable. The last command ([color=red].[/color]) is used for producing output, which you do not have access to until later puzzles, to keep UI concise.[/center]",
+				"page1":"[center]This is the first puzzle!\n\nGoal: Set [color=yellow]Cell 0[/color] to [color=green]1[/color].\n\nCommands required:\n+[/center]"
+			}
+	}
+}

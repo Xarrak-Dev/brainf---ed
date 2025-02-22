@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://bii2s3r8wc5bf"]
+
+[ext_resource type="Script" path="res://succesful_puzzle.gd" id="1_nq2ty"]
+[ext_resource type="FontFile" uid="uid://crb8tfej8hrt1" path="res://PixelifySans-Regular.ttf" id="2_faymk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hkv88"]
+bg_color = Color(0.329158, 0.329158, 0.329158, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_76dpq"]
+font = ExtResource("2_faymk")
+font_size = 30
+
+[node name="SuccesfulPuzzle" type="Node2D"]
+script = ExtResource("1_nq2ty")
+
+[node name="Overlay" type="ColorRect" parent="."]
+offset_left = -42.0
+offset_top = -24.0
+offset_right = 1988.0
+offset_bottom = 1108.0
+color = Color(0.737193, 0.737193, 0.737193, 0.215686)
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 660.0
+offset_top = 340.0
+offset_right = 1260.0
+offset_bottom = 740.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hkv88")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 802.0
+offset_top = 353.0
+offset_right = 1117.0
+offset_bottom = 389.0
+text = "You solved the puzzle!"
+label_settings = SubResource("LabelSettings_76dpq")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 847.0
+offset_top = 499.0
+offset_right = 1066.0
+offset_bottom = 555.0
+theme_override_fonts/font = ExtResource("2_faymk")
+theme_override_font_sizes/font_size = 40
+text = "Close Game"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

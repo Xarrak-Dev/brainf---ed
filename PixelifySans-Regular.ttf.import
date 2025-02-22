@@ -1,0 +1,40 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://crb8tfej8hrt1"
+path="res://.godot/imported/PixelifySans-Regular.ttf-c257533a35e702442e3b1adcfe605c2e.fontdata"
+
+[deps]
+
+source_file="res://PixelifySans-Regular.ttf"
+dest_files=["res://.godot/imported/PixelifySans-Regular.ttf-c257533a35e702442e3b1adcfe605c2e.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=0
+generate_mipmaps=false
+disable_embedded_bitmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=false
+force_autohinter=true
+hinting=0
+subpixel_positioning=2
+oversampling=10.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "New Configuration",
+"size": Vector2i(16, 0),
+"variation_embolden": 0.0
+}]
+language_support={}
+script_support={}
+opentype_features={}

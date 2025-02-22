@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=3 uid="uid://vc6fqkgcfr26"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_xnb2o"]
+[ext_resource type="FontFile" uid="uid://crb8tfej8hrt1" path="res://PixelifySans-Regular.ttf" id="2_why1f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pxg48"]
+font = ExtResource("2_why1f")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_xrlmi"]
+font = ExtResource("2_why1f")
+font_size = 22
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2(1.3, 1.3)
+script = ExtResource("1_xnb2o")
+
+[node name="Editor" type="TextEdit" parent="."]
+offset_left = 506.0
+offset_top = 82.0
+offset_right = 973.0
+offset_bottom = 456.0
+theme_override_fonts/font = ExtResource("2_why1f")
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Code goes here"
+wrap_mode = 1
+
+[node name="Input" type="TextEdit" parent="."]
+offset_left = 511.0
+offset_top = 568.0
+offset_right = 964.0
+offset_bottom = 606.0
+theme_override_fonts/font = ExtResource("2_why1f")
+theme_override_font_sizes/font_size = 20
+placeholder_text = "Input for the program goes here"
+
+[node name="ProcessButton" type="Button" parent="."]
+offset_left = 689.0
+offset_top = 517.0
+offset_right = 791.0
+offset_bottom = 561.0
+theme_override_fonts/font = ExtResource("2_why1f")
+theme_override_font_sizes/font_size = 23
+text = "Process"
+
+[node name="Cells" type="Node" parent="."]
+
+[node name="outputLabel" type="Label" parent="."]
+offset_left = 626.923
+offset_top = 713.077
+offset_right = 834.923
+offset_bottom = 742.077
+size_flags_horizontal = 4
+focus_mode = 2
+text = "Output Goes Here"
+label_settings = SubResource("LabelSettings_pxg48")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Pointer" type="Label" parent="."]
+offset_left = -74.6154
+offset_top = -46.9231
+offset_right = -49.6154
+offset_bottom = 13.0769
+rotation = 1.5708
+pivot_offset = Vector2(25, 30)
+theme_override_font_sizes/font_size = 43
+text = ">"
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = 520.0
+offset_top = 55.0
+offset_right = 961.0
+offset_bottom = 71.0
+max_value = 0.3
+step = 0.001
+
+[node name="infoLabel" type="Label" parent="HSlider"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = -36.5385
+offset_right = 280.0
+offset_bottom = -9.53846
+text = "Speed Slider"
+label_settings = SubResource("LabelSettings_xrlmi")
+
+[connection signal="pressed" from="ProcessButton" to="." method="_on_process_button_pressed"]
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]

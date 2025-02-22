@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dugbwiul1ufsa"]
+[gd_scene load_steps=4 format=3 uid="uid://dugbwiul1ufsa"]
 
 [ext_resource type="Script" path="res://cell.gd" id="1_o2em5"]
+[ext_resource type="FontFile" uid="uid://crb8tfej8hrt1" path="res://PixelifySans-Regular.ttf" id="2_22pnf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_35q8v"]
+font = ExtResource("2_22pnf")
+font_size = 19
 
 [node name="Cell" type="Node2D"]
 script = ExtResource("1_o2em5")
@@ -17,7 +22,18 @@ layout_mode = 0
 offset_top = 9.0
 offset_right = 40.0
 offset_bottom = 32.0
+text = "0"
+label_settings = SubResource("LabelSettings_35q8v")
+horizontal_alignment = 1
 metadata/_edit_group_ = true
+
+[node name="Cell Label" type="Label" parent="."]
+offset_left = -23.0
+offset_top = 20.0
+offset_right = 23.0
+offset_bottom = 43.0
+text = "Cell 0"
+label_settings = SubResource("LabelSettings_35q8v")
 
 [node name="Container" type="Container" parent="."]
 offset_left = -20.0
